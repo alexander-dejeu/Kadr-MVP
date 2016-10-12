@@ -12,6 +12,8 @@ class HomeController: UIViewController {
 
     
     //Customer Support Button Radius = 3pt
+    //All views have 3pt radius as well
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
