@@ -12,6 +12,7 @@ class BookingsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Your bookings"
 
         // Do any additional setup after loading the view.
     }

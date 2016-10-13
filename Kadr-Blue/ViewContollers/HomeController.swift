@@ -23,9 +23,11 @@ class HomeController: UIViewController {
         view.clipsToBounds = true
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Kadr"
         addCornersTo(view: bookPhotographerView)
         addCornersTo(view: yourBookingsView)
         addCornersTo(view: portfolioView)

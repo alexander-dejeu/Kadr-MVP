@@ -12,6 +12,7 @@ class BookTimeAndPlaceController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Date and Time"
 
         // Do any additional setup after loading the view.
     }

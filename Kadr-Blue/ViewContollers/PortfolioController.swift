@@ -11,6 +11,7 @@ import UIKit
 class PortfolioController: UIViewController {
 
     override func viewDidLoad() {
+        self.title = "Our works"
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
