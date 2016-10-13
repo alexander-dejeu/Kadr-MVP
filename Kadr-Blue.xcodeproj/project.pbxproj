@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6D61DAF30AA0020B29F /* BookingsController.swift */; };
+		FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6D81DAF30F00020B29F /* PortfolioController.swift */; };
+		FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */; };
+		FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DC1DAF315F0020B29F /* BookingUserDetailsController.swift */; };
+		FA30E6DF1DAF31710020B29F /* ConfirmBookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DE1DAF31710020B29F /* ConfirmBookingController.swift */; };
 		FACB6C081DAE9D8C0048727B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C071DAE9D8C0048727B /* AppDelegate.swift */; };
 		FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C091DAE9D8C0048727B /* ViewController.swift */; };
 		FACB6C0D1DAE9D8C0048727B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB6C0B1DAE9D8C0048727B /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA30E6D61DAF30AA0020B29F /* BookingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingsController.swift; sourceTree = "<group>"; };
+		FA30E6D81DAF30F00020B29F /* PortfolioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
+		FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTimeAndPlaceController.swift; sourceTree = "<group>"; };
+		FA30E6DC1DAF315F0020B29F /* BookingUserDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingUserDetailsController.swift; sourceTree = "<group>"; };
+		FA30E6DE1DAF31710020B29F /* ConfirmBookingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBookingController.swift; sourceTree = "<group>"; };
 		FACB6C041DAE9D8C0048727B /* Kadr-Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadr-Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB6C071DAE9D8C0048727B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACB6C091DAE9D8C0048727B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				FACB6C361DAE9F710048727B /* HomeController.swift */,
+				FA30E6D61DAF30AA0020B29F /* BookingsController.swift */,
+				FA30E6D81DAF30F00020B29F /* PortfolioController.swift */,
+				FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */,
+				FA30E6DC1DAF315F0020B29F /* BookingUserDetailsController.swift */,
+				FA30E6DE1DAF31710020B29F /* ConfirmBookingController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -274,8 +289,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */,
+				FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */,
+				FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */,
 				FACB6C081DAE9D8C0048727B /* AppDelegate.swift in Sources */,
+				FA30E6DF1DAF31710020B29F /* ConfirmBookingController.swift in Sources */,
 				FACB6C371DAE9F710048727B /* HomeController.swift in Sources */,
+				FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */,
+				FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +544,7 @@
 				FACB6C2E1DAE9D8D0048727B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FACB6C2F1DAE9D8D0048727B /* Build configuration list for PBXNativeTarget "Kadr-BlueTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +553,7 @@
 				FACB6C311DAE9D8D0048727B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FACB6C321DAE9D8D0048727B /* Build configuration list for PBXNativeTarget "Kadr-BlueUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +562,7 @@
 				FACB6C341DAE9D8D0048727B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

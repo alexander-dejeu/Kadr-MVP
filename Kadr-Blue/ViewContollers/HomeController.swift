@@ -13,10 +13,23 @@ class HomeController: UIViewController {
     
     //Customer Support Button Radius = 3pt
     //All views have 3pt radius as well
+    @IBOutlet weak var bookPhotographerView: UIView!
+    @IBOutlet weak var yourBookingsView: UIView!
+    @IBOutlet weak var portfolioView: UIView!
+    @IBOutlet weak var customerSupportButton: UIButton!
     
+    func addCornersTo(view: UIView){
+        view.layer.cornerRadius = 3
+        view.clipsToBounds = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addCornersTo(view: bookPhotographerView)
+        addCornersTo(view: yourBookingsView)
+        addCornersTo(view: portfolioView)
+        addCornersTo(view: customerSupportButton)
 
         // Do any additional setup after loading the view.
     }
@@ -36,5 +49,22 @@ class HomeController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func bookPhotographerButtonTapped(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "segueFromHomeToBookPhotographer", sender: nil)
+    }
+    
+    @IBAction func yourBookingsButtonTapped(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "segueFromHomeToBookings", sender: nil)
+    }
+    
+    @IBAction func portfolioButtonTapped(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "segueFromHomeToProfile", sender: nil)
+    }
+    
+    @IBAction func customerSupportButtonTapped(_ sender: AnyObject) {
+        
+    }
+
 
 }
