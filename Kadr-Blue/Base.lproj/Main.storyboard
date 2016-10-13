@@ -266,7 +266,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31G-Tu-41n">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -290,7 +290,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-p2-wWw">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -314,7 +314,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-lF-Ec9">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -337,6 +337,9 @@
                                 <state key="normal" title="Book">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="bookButtonPressed:" destination="gty-E6-C7F" eventType="touchUpInside" id="x0R-P0-hqw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -356,7 +359,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="jYJ-ZQ-MPe" kind="showDetail" action="showViewController:sender:" id="RyF-GH-xK2"/>
+                        <outlet property="bookButton" destination="bg7-UZ-aVz" id="SCc-Yx-rDu"/>
+                        <outlet property="userNameTextfield" destination="31G-Tu-41n" id="R7f-2m-uu7"/>
+                        <outlet property="userNameView" destination="ueC-W7-Gec" id="bbd-FA-JEV"/>
+                        <outlet property="userPhoneNumberTextfield" destination="Zrg-p2-wWw" id="WcO-IG-A6f"/>
+                        <outlet property="userPhoneNumberView" destination="y4Y-6k-I3S" id="fCX-rP-29t"/>
+                        <outlet property="userPhotoCountTextfield" destination="7dm-lF-Ec9" id="5ab-CY-Bp0"/>
+                        <outlet property="userPhototCountView" destination="NBy-WI-T3y" id="7y1-af-YeL"/>
+                        <segue destination="jYJ-ZQ-MPe" kind="presentation" identifier="segueFromUserInformationToBookingConfirmation" id="RyF-GH-xK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jaq-B5-ruM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,6 +397,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" image="Close"/>
+                                <connections>
+                                    <action selector="closeConfirmation:" destination="jYJ-ZQ-MPe" eventType="touchUpInside" id="UGw-jV-3tB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -397,8 +410,12 @@
                             <constraint firstItem="9kw-W5-5GC" firstAttribute="top" secondItem="vid-LS-7IX" secondAttribute="bottom" constant="19" id="sbX-jz-sAS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="4bd-fD-Pb0" kind="unwind" identifier="unwindFromConfirmationToHome" unwindAction="unwindToHomeWithSegue:" id="gqa-5n-6xq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIg-1h-NS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4bd-fD-Pb0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2666" y="-712"/>
         </scene>
@@ -447,6 +464,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="47H-gk-Krc" eventType="touchUpInside" id="gWT-Te-k1X"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z0E-FG-jfo">
                                 <subviews>
@@ -487,7 +507,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="gty-E6-C7F" kind="show" id="sLT-ag-jgb"/>
+                        <outlet property="bookingTimePicker" destination="Ha7-pJ-Kvn" id="VRh-rE-0Bw"/>
+                        <outlet property="dateAndTimeView" destination="Ibz-xi-1j9" id="EUD-Pf-HM8"/>
+                        <outlet property="locationTextfield" destination="sZf-Hc-CL1" id="Ub7-6K-KQu"/>
+                        <outlet property="nextButton" destination="8dP-3a-cxv" id="GFx-Nk-OuD"/>
+                        <outlet property="whereView" destination="Z0E-FG-jfo" id="w7V-wQ-p8o"/>
+                        <segue destination="gty-E6-C7F" kind="show" identifier="segueFromTimeToUserInformation" id="sLT-ag-jgb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diu-9r-drO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -510,7 +535,7 @@
                                 <color key="backgroundColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="335" id="mMn-lJ-OIv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingCell" rowHeight="335" id="mMn-lJ-OIv" customClass="BookingsCell" customModule="Kadr_Blue" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="335"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mMn-lJ-OIv" id="QiP-3o-wbb">
@@ -546,16 +571,6 @@
                                                             <color key="textColor" red="0.019607843137254902" green="0.019607843137254902" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-mW-r03">
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <color key="textColor" red="0.81568627450980391" green="0.0078431372549019607" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Call" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-ns-6mY">
-                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                            <color key="textColor" red="0.72156862745098038" green="0.9137254901960784" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5T-HP-pp8">
                                                             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
@@ -568,31 +583,57 @@
                                                                 <constraint firstAttribute="height" constant="1" id="huq-Ij-4Cn"/>
                                                             </constraints>
                                                         </view>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqu-gp-BSI">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60.5" id="Wea-54-vZA"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <state key="normal" title="Call">
+                                                                <color key="titleColor" red="0.72156862749999995" green="0.91372549020000005" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="callButtonPressed:" destination="mMn-lJ-OIv" eventType="touchUpInside" id="yvg-8w-rTx"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2d-an-1fB">
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60.5" id="tCS-zM-jFQ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                                            <state key="normal" title="Cancel Order">
+                                                                <color key="titleColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="cancelOrderButtonPressed:" destination="mMn-lJ-OIv" eventType="touchUpInside" id="aag-9D-8uR"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="yok-se-FL6" firstAttribute="top" secondItem="cnL-hQ-VVW" secondAttribute="bottom" constant="7" id="0np-BZ-nF4"/>
                                                         <constraint firstAttribute="height" constant="316" id="4Xi-kC-3kt"/>
                                                         <constraint firstAttribute="trailing" secondItem="8Ie-K0-lQA" secondAttribute="trailing" constant="19" id="4kn-wT-o9c"/>
-                                                        <constraint firstItem="F5T-HP-pp8" firstAttribute="top" secondItem="WQ5-ns-6mY" secondAttribute="bottom" constant="21" id="5em-QL-Osa"/>
                                                         <constraint firstItem="UyH-wT-bJq" firstAttribute="centerX" secondItem="1yn-RH-vbw" secondAttribute="centerX" id="6KJ-6k-2BW"/>
                                                         <constraint firstItem="49a-kV-wkF" firstAttribute="top" secondItem="1yn-RH-vbw" secondAttribute="top" constant="30" id="8Fh-FO-CgE"/>
                                                         <constraint firstItem="cnL-hQ-VVW" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" constant="22" id="9Fk-f0-vc4"/>
                                                         <constraint firstItem="yok-se-FL6" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" constant="22" id="9pQ-jP-9PE"/>
                                                         <constraint firstAttribute="trailing" secondItem="F5T-HP-pp8" secondAttribute="trailing" id="Afd-Hn-xyT"/>
+                                                        <constraint firstItem="Fqu-gp-BSI" firstAttribute="top" secondItem="txC-VX-P52" secondAttribute="bottom" id="Fn1-lD-V3P"/>
+                                                        <constraint firstItem="F2d-an-1fB" firstAttribute="top" secondItem="F5T-HP-pp8" secondAttribute="bottom" id="HUY-Du-ZjQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="F2d-an-1fB" secondAttribute="trailing" id="KQn-wD-dhC"/>
                                                         <constraint firstItem="8Ie-K0-lQA" firstAttribute="top" secondItem="UyH-wT-bJq" secondAttribute="bottom" constant="33.600000000000001" id="P0f-lk-JI8"/>
                                                         <constraint firstAttribute="trailing" secondItem="49a-kV-wkF" secondAttribute="trailing" id="QJs-le-l3f"/>
                                                         <constraint firstItem="UyH-wT-bJq" firstAttribute="top" secondItem="49a-kV-wkF" secondAttribute="bottom" constant="10" id="SxT-yi-0f4"/>
                                                         <constraint firstItem="txC-VX-P52" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" id="XDS-Ri-yAE"/>
-                                                        <constraint firstItem="WQ5-ns-6mY" firstAttribute="top" secondItem="txC-VX-P52" secondAttribute="bottom" constant="20" id="YYQ-0L-s74"/>
                                                         <constraint firstItem="F5T-HP-pp8" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" id="bF1-pv-ngc"/>
                                                         <constraint firstItem="cnL-hQ-VVW" firstAttribute="top" secondItem="UyH-wT-bJq" secondAttribute="bottom" constant="30" id="bpm-z2-TRF"/>
                                                         <constraint firstAttribute="trailing" secondItem="txC-VX-P52" secondAttribute="trailing" id="buj-fq-hHI"/>
-                                                        <constraint firstItem="WQ5-ns-6mY" firstAttribute="centerX" secondItem="1yn-RH-vbw" secondAttribute="centerX" id="cnZ-Ib-EUs"/>
-                                                        <constraint firstItem="TpZ-mW-r03" firstAttribute="top" secondItem="F5T-HP-pp8" secondAttribute="bottom" constant="20" id="hJO-gu-eby"/>
+                                                        <constraint firstItem="Fqu-gp-BSI" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" id="fvx-iS-6EN"/>
                                                         <constraint firstItem="49a-kV-wkF" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" id="itc-a0-ycY"/>
-                                                        <constraint firstItem="TpZ-mW-r03" firstAttribute="centerX" secondItem="1yn-RH-vbw" secondAttribute="centerX" id="otc-Bx-OPa"/>
-                                                        <constraint firstAttribute="bottom" secondItem="TpZ-mW-r03" secondAttribute="bottom" constant="21" id="ox3-HT-0Mk"/>
+                                                        <constraint firstItem="F2d-an-1fB" firstAttribute="leading" secondItem="1yn-RH-vbw" secondAttribute="leading" id="k4a-DO-WLW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="F2d-an-1fB" secondAttribute="bottom" id="mvj-fd-YLr"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Fqu-gp-BSI" secondAttribute="trailing" id="uSE-4e-zfc"/>
+                                                        <constraint firstItem="F5T-HP-pp8" firstAttribute="top" secondItem="Fqu-gp-BSI" secondAttribute="bottom" id="yDu-iu-jfj"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -603,8 +644,19 @@
                                                 <constraint firstItem="1yn-RH-vbw" firstAttribute="leading" secondItem="QiP-3o-wbb" secondAttribute="leading" constant="20" id="hTk-Ou-9n4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookingDateLabel" destination="cnL-hQ-VVW" id="aLh-n8-N3N"/>
+                                            <outlet property="bookingLocationLabel" destination="yok-se-FL6" id="EjP-jO-cRL"/>
+                                            <outlet property="bookingTimeLabel" destination="8Ie-K0-lQA" id="PJs-Fc-obn"/>
+                                            <outlet property="bookingView" destination="1yn-RH-vbw" id="8rk-Km-0O7"/>
+                                            <outlet property="photographerNameLabel" destination="49a-kV-wkF" id="hyb-Ai-a2c"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xH8-QQ-UbW" id="HfN-pH-K7p"/>
+                                    <outlet property="delegate" destination="xH8-QQ-UbW" id="heG-CX-vsa"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

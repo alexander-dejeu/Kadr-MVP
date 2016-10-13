@@ -31,5 +31,8 @@ class ConfirmBookingController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func closeConfirmation(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "unwindFromConfirmationToHome", sender: nil)
+    }
 
 }

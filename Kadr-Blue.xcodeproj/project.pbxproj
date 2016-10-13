@@ -12,6 +12,9 @@
 		FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */; };
 		FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DC1DAF315F0020B29F /* BookingUserDetailsController.swift */; };
 		FA30E6DF1DAF31710020B29F /* ConfirmBookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DE1DAF31710020B29F /* ConfirmBookingController.swift */; };
+		FA30E6E31DAF45460020B29F /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6E21DAF45460020B29F /* UIHelper.swift */; };
+		FA30E6E51DAF4A230020B29F /* BookingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6E41DAF4A230020B29F /* BookingsCell.swift */; };
+		FA30E6E71DAF4A330020B29F /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */; };
 		FACB6C081DAE9D8C0048727B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C071DAE9D8C0048727B /* AppDelegate.swift */; };
 		FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C091DAE9D8C0048727B /* ViewController.swift */; };
 		FACB6C0D1DAE9D8C0048727B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB6C0B1DAE9D8C0048727B /* Main.storyboard */; };
@@ -45,6 +48,9 @@
 		FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTimeAndPlaceController.swift; sourceTree = "<group>"; };
 		FA30E6DC1DAF315F0020B29F /* BookingUserDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingUserDetailsController.swift; sourceTree = "<group>"; };
 		FA30E6DE1DAF31710020B29F /* ConfirmBookingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmBookingController.swift; sourceTree = "<group>"; };
+		FA30E6E21DAF45460020B29F /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		FA30E6E41DAF4A230020B29F /* BookingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingsCell.swift; sourceTree = "<group>"; };
+		FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
 		FACB6C041DAE9D8C0048727B /* Kadr-Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadr-Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB6C071DAE9D8C0048727B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACB6C091DAE9D8C0048727B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA30E6E01DAF45390020B29F /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				FA30E6E41DAF4A230020B29F /* BookingsCell.swift */,
+				FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		FA30E6E11DAF45390020B29F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA30E6E21DAF45460020B29F /* UIHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FACB6BFB1DAE9D8C0048727B = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +132,8 @@
 		FACB6C061DAE9D8C0048727B /* Kadr-Blue */ = {
 			isa = PBXGroup;
 			children = (
+				FA30E6E01DAF45390020B29F /* CustomElements */,
+				FA30E6E11DAF45390020B29F /* Helpers */,
 				FACB6C351DAE9F620048727B /* ViewContollers */,
 				FACB6C071DAE9D8C0048727B /* AppDelegate.swift */,
 				FACB6C091DAE9D8C0048727B /* ViewController.swift */,
@@ -291,8 +316,11 @@
 				FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */,
 				FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */,
 				FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */,
+				FA30E6E51DAF4A230020B29F /* BookingsCell.swift in Sources */,
 				FACB6C081DAE9D8C0048727B /* AppDelegate.swift in Sources */,
 				FA30E6DF1DAF31710020B29F /* ConfirmBookingController.swift in Sources */,
+				FA30E6E31DAF45460020B29F /* UIHelper.swift in Sources */,
+				FA30E6E71DAF4A330020B29F /* PortfolioCell.swift in Sources */,
 				FACB6C371DAE9F710048727B /* HomeController.swift in Sources */,
 				FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */,
 				FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */,

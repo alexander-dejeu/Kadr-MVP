@@ -9,11 +9,23 @@
 import UIKit
 
 class BookTimeAndPlaceController: UIViewController {
+    @IBOutlet weak var dateAndTimeView: UIView!
 
+    @IBOutlet weak var whereView: UIView!
+    
+    @IBOutlet weak var bookingTimePicker: UIDatePicker!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var locationTextfield: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Date and Time"
-
+        
+        UIHelper.addCornersTo(view: whereView)
+        UIHelper.addCornersTo(view: dateAndTimeView)
+        UIHelper.addCornersTo(view: nextButton)
         // Do any additional setup after loading the view.
     }
 
@@ -32,5 +44,9 @@ class BookTimeAndPlaceController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func nextButtonTapped(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "segueFromTimeToUserInformation", sender: nil)
+    }
 
 }

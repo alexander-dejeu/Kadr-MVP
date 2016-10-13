@@ -18,20 +18,15 @@ class HomeController: UIViewController {
     @IBOutlet weak var portfolioView: UIView!
     @IBOutlet weak var customerSupportButton: UIButton!
     
-    func addCornersTo(view: UIView){
-        view.layer.cornerRadius = 3
-        view.clipsToBounds = true
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Kadr"
-        addCornersTo(view: bookPhotographerView)
-        addCornersTo(view: yourBookingsView)
-        addCornersTo(view: portfolioView)
-        addCornersTo(view: customerSupportButton)
+        UIHelper.addCornersTo(view: bookPhotographerView)
+        UIHelper.addCornersTo(view: yourBookingsView)
+        UIHelper.addCornersTo(view: portfolioView)
+        UIHelper.addCornersTo(view: customerSupportButton)
 
         // Do any additional setup after loading the view.
     }
@@ -66,6 +61,9 @@ class HomeController: UIViewController {
     
     @IBAction func customerSupportButtonTapped(_ sender: AnyObject) {
         
+    }
+    
+    @IBAction func unwindToHome(segue:UIStoryboardSegue) {
     }
 
 
