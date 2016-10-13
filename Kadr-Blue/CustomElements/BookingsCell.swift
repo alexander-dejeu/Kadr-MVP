@@ -15,10 +15,16 @@ class BookingsCell: UITableViewCell {
     @IBOutlet weak var bookingLocationLabel: UILabel!
     @IBOutlet weak var bookingTimeLabel: UILabel!
     
+    @IBOutlet weak var starRating: starRatingView!
+    
     @IBOutlet weak var bookingView: UIView!
     
     func setView(){
         UIHelper.addCornersTo(view: bookingView)
+    }
+    
+    func setStars(starCount: Int){
+        starRating.addStars(starCount: starCount)
     }
     
     

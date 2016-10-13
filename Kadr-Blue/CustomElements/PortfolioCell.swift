@@ -9,7 +9,14 @@
 import UIKit
 
 class PortfolioCell: UITableViewCell {
+    
+    @IBOutlet weak var portfolioView: UIView!
+    @IBOutlet weak var portfolioImage: UIImageView!
 
+    func setupView(){
+        portfolioView.layer.cornerRadius = 3
+        portfolioView.clipsToBounds = true
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

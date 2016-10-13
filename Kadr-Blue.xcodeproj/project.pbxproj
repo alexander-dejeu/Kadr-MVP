@@ -15,6 +15,7 @@
 		FA30E6E31DAF45460020B29F /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6E21DAF45460020B29F /* UIHelper.swift */; };
 		FA30E6E51DAF4A230020B29F /* BookingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6E41DAF4A230020B29F /* BookingsCell.swift */; };
 		FA30E6E71DAF4A330020B29F /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */; };
+		FACB39D91DAFED1D0012F320 /* starRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB39D81DAFED1D0012F320 /* starRatingView.swift */; };
 		FACB6C081DAE9D8C0048727B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C071DAE9D8C0048727B /* AppDelegate.swift */; };
 		FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C091DAE9D8C0048727B /* ViewController.swift */; };
 		FACB6C0D1DAE9D8C0048727B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB6C0B1DAE9D8C0048727B /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		FA30E6E21DAF45460020B29F /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		FA30E6E41DAF4A230020B29F /* BookingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingsCell.swift; sourceTree = "<group>"; };
 		FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
+		FACB39D81DAFED1D0012F320 /* starRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = starRatingView.swift; sourceTree = "<group>"; };
 		FACB6C041DAE9D8C0048727B /* Kadr-Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadr-Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB6C071DAE9D8C0048727B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACB6C091DAE9D8C0048727B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				FA30E6E41DAF4A230020B29F /* BookingsCell.swift */,
 				FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */,
+				FACB39D81DAFED1D0012F320 /* starRatingView.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */,
+				FACB39D91DAFED1D0012F320 /* starRatingView.swift in Sources */,
 				FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */,
 				FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */,
 				FA30E6E51DAF4A230020B29F /* BookingsCell.swift in Sources */,

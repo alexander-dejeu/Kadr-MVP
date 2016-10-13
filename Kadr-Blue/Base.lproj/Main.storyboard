@@ -191,11 +191,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="364" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-o4-eEz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="364" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dD5-o4-eEz">
                                 <color key="backgroundColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="364" id="b7u-4N-y8D">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PortfolioCell" rowHeight="364" id="b7u-4N-y8D" customClass="PortfolioCell" customModule="Kadr_Blue" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="364"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b7u-4N-y8D" id="4xy-X2-6KR">
@@ -227,8 +227,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="portfolioImage" destination="Jpq-mN-Jxm" id="eOw-J4-UiU"/>
+                                            <outlet property="portfolioView" destination="FIP-Sd-aN9" id="JFU-5V-K8K"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="H1x-X2-R1v" id="Usq-dc-ndk"/>
+                                    <outlet property="delegate" destination="H1x-X2-R1v" id="dhz-sC-mEd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -531,7 +539,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="373" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-rC-uXk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="373" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uvw-rC-uXk">
                                 <color key="backgroundColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.96071070430000005" green="0.96082574129999998" blue="0.96067160370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -549,8 +557,7 @@
                                                             <color key="textColor" red="0.019607843137254902" green="0.019607843137254902" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyH-wT-bJq">
-                                                            <color key="backgroundColor" red="0.27450980390000002" green="0.6705882353" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyH-wT-bJq" customClass="starRatingView" customModule="Kadr_Blue" customModuleProvider="target">
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="15.4" id="Sof-5U-Bz9"/>
                                                                 <constraint firstAttribute="width" constant="100" id="aeP-Tf-F8z"/>
@@ -650,6 +657,7 @@
                                             <outlet property="bookingTimeLabel" destination="8Ie-K0-lQA" id="PJs-Fc-obn"/>
                                             <outlet property="bookingView" destination="1yn-RH-vbw" id="8rk-Km-0O7"/>
                                             <outlet property="photographerNameLabel" destination="49a-kV-wkF" id="hyb-Ai-a2c"/>
+                                            <outlet property="starRating" destination="UyH-wT-bJq" id="jcE-m1-avi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
