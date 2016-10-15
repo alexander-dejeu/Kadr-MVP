@@ -9,6 +9,7 @@
 import UIKit
 
 class BookTimeAndPlaceController: UIViewController {
+    
     @IBOutlet weak var dateAndTimeView: UIView!
 
     @IBOutlet weak var whereView: UIView!
@@ -23,6 +24,12 @@ class BookTimeAndPlaceController: UIViewController {
         super.viewDidLoad()
         self.title = "Date and Time"
         
+        NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(BookTimeAndPlaceController.hideKeyboard))
+        tapGesture.cancelsTouchesInView = true
+        self.view.addGestureRecognizer(tapGesture)
+        
         UIHelper.addCornersTo(view: whereView)
         UIHelper.addCornersTo(view: dateAndTimeView)
         UIHelper.addCornersTo(view: nextButton)
@@ -33,7 +40,7 @@ class BookTimeAndPlaceController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
@@ -50,3 +57,31 @@ class BookTimeAndPlaceController: UIViewController {
     }
 
 }
+
+extension BookTimeAndPlaceController {
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
+    func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+}
+

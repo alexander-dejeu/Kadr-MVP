@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookingUserDetailsController: UIViewController {
+class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameView: UIView!
     @IBOutlet weak var userPhoneNumberView: UIView!
     @IBOutlet weak var userPhototCountView: UIView!
@@ -19,10 +19,24 @@ class BookingUserDetailsController: UIViewController {
     @IBOutlet weak var userPhoneNumberTextfield: UITextField!
     
     @IBOutlet weak var userPhotoCountTextfield: UITextField!
-    
+        
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+       
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(BookTimeAndPlaceController.hideKeyboard))
+        tapGesture.cancelsTouchesInView = true
+        self.view.addGestureRecognizer(tapGesture)
+        
+        self.userNameTextfield.delegate = self
+        self.userPhoneNumberTextfield.delegate = self
+        self.userPhotoCountTextfield.delegate = self
+
+        
         self.title = "Information"
         // Do any additional setup after loading the view.
         UIHelper.addCornersTo(view: userNameView)
@@ -53,3 +67,37 @@ class BookingUserDetailsController: UIViewController {
     }
 
 }
+
+extension BookingUserDetailsController {
+    
+
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if  userPhotoCountTextfield.isFirstResponder == true {
+            
+            if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+                if self.view.frame.origin.y == 0{
+                    self.view.frame.origin.y -= keyboardSize.height
+                }
+            }
+            
+        }
+        
+        
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
+    func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+}
+
