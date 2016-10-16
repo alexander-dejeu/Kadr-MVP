@@ -40,8 +40,16 @@ class BookingsCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func makeCall(phone: String) {
+        let formatedNumber = phone.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
+        let phoneUrl = "tel://\(formatedNumber)"
+        let url:NSURL = NSURL(string: phoneUrl)!
+        UIApplication.shared.openURL(url as URL)
+    }
+    
     @IBAction func callButtonPressed(_ sender: AnyObject) {
         print("calling the photographer!")
+        makeCall(phone: "5087367850")
     }
     
     @IBAction func cancelOrderButtonPressed(_ sender: AnyObject) {
