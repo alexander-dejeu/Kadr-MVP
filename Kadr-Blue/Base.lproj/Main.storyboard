@@ -12,7 +12,7 @@
         <scene sceneID="H9R-SQ-qjN">
             <objects>
                 <navigationController id="9j3-YD-FUa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rTG-co-3hq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rTG-co-3hq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.27450980392156865" green="0.6705882352941176" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
@@ -248,6 +248,9 @@
                             <constraint firstItem="dD5-o4-eEz" firstAttribute="leading" secondItem="Pjg-Xq-tbj" secondAttribute="leading" id="TLb-BF-d7f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="portfolioTableView" destination="dD5-o4-eEz" id="xbw-5d-8kc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TOa-HN-6kl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

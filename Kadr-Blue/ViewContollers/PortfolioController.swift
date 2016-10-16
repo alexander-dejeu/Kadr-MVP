@@ -7,40 +7,111 @@
 //
 
 import UIKit
+import Firebase
 
 class PortfolioController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    var database: FIRDatabase! = FIRDatabase.database()
+    var storage: FIRStorage! = FIRStorage.storage()
+    
+    @IBOutlet weak var portfolioTableView: UITableView!
+    
+    // Initialize an array for your pictures
+    var picArray: [UIImage] = []
+    
+    
     override func viewDidLoad() {
         self.title = "Our works"
         super.viewDidLoad()
-
+        
+        
+        //        let storage = FIRStorage.storage()
+        //        let storageRef = storage.reference(forURL: "gs://kadr-blue.appspot.com")
+        //
+        //        let imagesRef = storageRef.child("images")
+        
+        // Child references can also take paths delimited by '/'
+        // spaceRef now points to "images/space.jpg"
+        // imagesRef still points to "images"
+        //        let spaceRef = storageRef.child("images/space.jpg")
+        
+        
+        
+        //        Portfolio/FileNames
+        let dbRef = database.reference().child("Portfolio").child("FileNames")
+        print("It is called!!: \(dbRef)")
+        
+        let testStorageRef = self.storage.reference(withPath: "Portfolio/" + "IMG1" + ".jpg")
+        
+        let reference = FIRStorage.storage().reference(withPath: "Portfolio/IMG1.jpg")
+        testStorageRef.data(withMaxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+            // Create a UIImage, add it to the array
+            if (error != nil) {
+                print(error)
+            } else {
+                let pic = UIImage(data: data!)
+                self.picArray.append(pic!)
+            }
+        }
+        
+        
+        dbRef.observe(.childAdded, with: { (snapshot) in
+            // Get download URL from snapshot
+            print("Will this happen")
+            let downloadURL = "gs://kadr-blue.appspot.com/Portfolio/" + snapshot.key + ".jpg"
+            //           gs://kadr-blue.appspot.com/Portfolio
+            // Create a storage reference from the URL
+            print(" Test \(downloadURL)")
+            print("does this happen?!")
+            let storageRef = self.storage.reference(forURL: downloadURL)
+            // Download the data, assuming a max size of 1MB (you can change this as necessary)
+            storageRef.data(withMaxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                // Create a UIImage, add it to the array
+                let pic = UIImage(data: data!)
+                self.picArray.append(pic!)
+                print(self.picArray.count)
+                self.portfolioTableView.reloadData()
+            }
+        })
+        
+        
+        
+        // This is equivalent to creating the full reference
+        //        let spaceRef = storage.referenceForURL("gs://<your-firebase-storage-bucket>/images/space.jpg")
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PortfolioCell", for: indexPath) as! PortfolioCell
         cell.setupView()
+        cell.portfolioImage.image = picArray[indexPath.row]
+        
         return cell
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return picArray.count
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

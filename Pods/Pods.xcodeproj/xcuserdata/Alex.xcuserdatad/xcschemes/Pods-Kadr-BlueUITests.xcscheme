@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E18091E6060FF156A2D4A859'
+               BlueprintIdentifier = 'DA82BC05F5912378754E4E1E'
                BlueprintName = 'Pods-Kadr-BlueUITests'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-Kadr-BlueUITests.a'>
