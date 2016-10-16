@@ -24,36 +24,7 @@ class PortfolioController: UIViewController, UITableViewDataSource, UITableViewD
         self.title = "Our works"
         super.viewDidLoad()
         
-        
-        //        let storage = FIRStorage.storage()
-        //        let storageRef = storage.reference(forURL: "gs://kadr-blue.appspot.com")
-        //
-        //        let imagesRef = storageRef.child("images")
-        
-        // Child references can also take paths delimited by '/'
-        // spaceRef now points to "images/space.jpg"
-        // imagesRef still points to "images"
-        //        let spaceRef = storageRef.child("images/space.jpg")
-        
-        
-        
-        //        Portfolio/FileNames
         let dbRef = database.reference().child("Portfolio").child("FileNames")
-        print("It is called!!: \(dbRef)")
-        
-        let testStorageRef = self.storage.reference(withPath: "Portfolio/" + "IMG1" + ".jpg")
-        
-        let reference = FIRStorage.storage().reference(withPath: "Portfolio/IMG1.jpg")
-        testStorageRef.data(withMaxSize: 1 * 1024 * 1024) { (data, error) -> Void in
-            // Create a UIImage, add it to the array
-            if (error != nil) {
-                print(error)
-            } else {
-                let pic = UIImage(data: data!)
-                self.picArray.append(pic!)
-            }
-        }
-        
         
         dbRef.observe(.childAdded, with: { (snapshot) in
             // Get download URL from snapshot
