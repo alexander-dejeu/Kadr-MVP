@@ -8,6 +8,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Database’
 pod 'Firebase/Auth'
+pod 'Smooch'
 end
 
 target 'Kadr-BlueTests' do
@@ -15,6 +16,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Database’
 pod 'Firebase/Auth'
+pod 'Smooch'
 end
 
 target 'Kadr-BlueUITests' do
@@ -22,4 +24,5 @@ pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Database’
 pod 'Firebase/Auth'
+pod 'Smooch'
 end

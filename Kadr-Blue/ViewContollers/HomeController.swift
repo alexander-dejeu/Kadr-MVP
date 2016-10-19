@@ -62,10 +62,22 @@ class HomeController: UIViewController {
     }
     
     @IBAction func customerSupportButtonTapped(_ sender: AnyObject) {
-        
+        openChat()
     }
     
     @IBAction func unwindToHome(segue:UIStoryboardSegue) {
+    }
+    
+    func openChat() {
+        
+        
+        Smooch.show()
+        
+        let settings = SKTSettings(appToken: "cdbddzh8h2oo3p4do3pdu3mde")
+        settings.conversationAccentColor = UIColor(red: 70.0 / 255.0, green: 171.0 / 255.0, blue: 227.0 / 255.0, alpha: 1.0)
+        
+        UINavigationBar.appearance().tintColor = UIColor(red: 70.0 / 255.0, green: 171.0 / 255.0, blue: 227.0 / 255.0, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName : UIColor(red: 70.0 / 255.0, green: 171.0 / 255.0, blue: 227.0 / 255.0, alpha: 1.0)]
     }
 
 

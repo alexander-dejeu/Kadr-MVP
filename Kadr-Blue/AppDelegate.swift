@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
          FIRApp.configure()
+         Smooch.initWith(SKTSettings(appToken: "cdbddzh8h2oo3p4do3pdu3mde"))
         
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor(red: 70.0/255.0, green: 171.0/255.0, blue: 227.0/255.0, alpha: 1.0)]
         return true
