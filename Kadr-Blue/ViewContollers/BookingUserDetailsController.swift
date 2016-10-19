@@ -63,6 +63,16 @@ class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
     */
     
     @IBAction func bookButtonPressed(_ sender: AnyObject) {
+        
+        UserInputHelper.sharedInstance.name = userNameTextfield.text
+        UserInputHelper.sharedInstance.phone = userPhoneNumberTextfield.text
+        
+        if let number = userPhotoCountTextfield.text {
+            UserInputHelper.sharedInstance.number = Int(number)
+        }
+        
+        UserInputHelper.sharedInstance.saveBookingRequest()
+        
         self.performSegue(withIdentifier: "segueFromUserInformationToBookingConfirmation", sender: nil)
     }
 

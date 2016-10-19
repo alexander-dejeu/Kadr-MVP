@@ -22,6 +22,8 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        FirebaseHelper.sharedInstance.loginWithFirebase()
+        
         self.title = "Kadr"
         UIHelper.addCornersTo(view: bookPhotographerView)
         UIHelper.addCornersTo(view: yourBookingsView)

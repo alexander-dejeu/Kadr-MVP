@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51988B868193C38979352451 /* libPods-Kadr-BlueUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D16D3A6D7EC93126173F57C /* libPods-Kadr-BlueUITests.a */; };
-		9BF9FB45E834FD15DFEC5D25 /* libPods-Kadr-BlueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3ED22571F34DBB4B30F961 /* libPods-Kadr-BlueTests.a */; };
-		E682E90BF8B73E100B95AE10 /* libPods-Kadr-Blue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6A47AA5CCD85E0D4F1FCD5 /* libPods-Kadr-Blue.a */; };
+		28D3A9A60D1AA5CBABF84730 /* libPods-Kadr-BlueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B333101F9F930CD214BF5 /* libPods-Kadr-BlueTests.a */; };
+		3F4ABB711DB819B70077216B /* UserInputHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB701DB819B70077216B /* UserInputHelper.swift */; };
+		3F4ABB731DB81B1D0077216B /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */; };
+		F43FB27F9F08346C9DEC243F /* libPods-Kadr-BlueUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E99190FD6AF281AE285C726 /* libPods-Kadr-BlueUITests.a */; };
 		FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6D61DAF30AA0020B29F /* BookingsController.swift */; };
 		FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6D81DAF30F00020B29F /* PortfolioController.swift */; };
 		FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */; };
@@ -28,6 +29,7 @@
 		FACB6C1D1DAE9D8D0048727B /* Kadr_BlueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C1C1DAE9D8D0048727B /* Kadr_BlueTests.swift */; };
 		FACB6C281DAE9D8D0048727B /* Kadr_BlueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C271DAE9D8D0048727B /* Kadr_BlueUITests.swift */; };
 		FACB6C371DAE9F710048727B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C361DAE9F710048727B /* HomeController.swift */; };
+		FD13C5673E8E54B644A3141A /* libPods-Kadr-Blue.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6348B9E6A5E07EB4D769C5B6 /* libPods-Kadr-Blue.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,15 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D16D3A6D7EC93126173F57C /* libPods-Kadr-BlueUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-BlueUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F6A47AA5CCD85E0D4F1FCD5 /* libPods-Kadr-Blue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-Blue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		65E519DE892D6E9EECA1419F /* Pods-Kadr-BlueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6630503E5C651EC84B0A01AC /* Pods-Kadr-BlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6B3ED22571F34DBB4B30F961 /* libPods-Kadr-BlueTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-BlueTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A099FF1B88293C2E4E964736 /* Pods-Kadr-BlueUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A811B202D918FF9E52A1543D /* Pods-Kadr-BlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests.release.xcconfig"; sourceTree = "<group>"; };
-		EB78F3495D1D91CBC233D498 /* Pods-Kadr-Blue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-Blue.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue.release.xcconfig"; sourceTree = "<group>"; };
-		F0BCF37713A9A99DB66D91FE /* Pods-Kadr-Blue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-Blue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue.debug.xcconfig"; sourceTree = "<group>"; };
+		19BE8E86EBF71F39C066C5F9 /* Pods-Kadr-Blue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-Blue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue.debug.xcconfig"; sourceTree = "<group>"; };
+		1BB9D091EC5D864978CEADE8 /* Pods-Kadr-BlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F4ABB701DB819B70077216B /* UserInputHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputHelper.swift; sourceTree = "<group>"; };
+		3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		6348B9E6A5E07EB4D769C5B6 /* libPods-Kadr-Blue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-Blue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		742478BF2B11C7725FB51C76 /* Pods-Kadr-BlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests.release.xcconfig"; sourceTree = "<group>"; };
+		7E99190FD6AF281AE285C726 /* libPods-Kadr-BlueUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-BlueUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B98BE20D6629C2E0E1F64C1 /* Pods-Kadr-BlueUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A34B333101F9F930CD214BF5 /* libPods-Kadr-BlueTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-BlueTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD0CB88F310CDD9017A724A4 /* Pods-Kadr-BlueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B4750C2B8D87F4257A0EDCE8 /* Pods-Kadr-Blue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-Blue.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue.release.xcconfig"; sourceTree = "<group>"; };
 		FA30E6D61DAF30AA0020B29F /* BookingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingsController.swift; sourceTree = "<group>"; };
 		FA30E6D81DAF30F00020B29F /* PortfolioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
 		FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTimeAndPlaceController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E682E90BF8B73E100B95AE10 /* libPods-Kadr-Blue.a in Frameworks */,
+				FD13C5673E8E54B644A3141A /* libPods-Kadr-Blue.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BF9FB45E834FD15DFEC5D25 /* libPods-Kadr-BlueTests.a in Frameworks */,
+				28D3A9A60D1AA5CBABF84730 /* libPods-Kadr-BlueTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,32 +108,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51988B868193C38979352451 /* libPods-Kadr-BlueUITests.a in Frameworks */,
+				F43FB27F9F08346C9DEC243F /* libPods-Kadr-BlueUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		59C262624EDDAB0FB11A8035 /* Frameworks */ = {
+		8EE3B0CA394CB61D2404480F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3F6A47AA5CCD85E0D4F1FCD5 /* libPods-Kadr-Blue.a */,
-				6B3ED22571F34DBB4B30F961 /* libPods-Kadr-BlueTests.a */,
-				1D16D3A6D7EC93126173F57C /* libPods-Kadr-BlueUITests.a */,
+				6348B9E6A5E07EB4D769C5B6 /* libPods-Kadr-Blue.a */,
+				A34B333101F9F930CD214BF5 /* libPods-Kadr-BlueTests.a */,
+				7E99190FD6AF281AE285C726 /* libPods-Kadr-BlueUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F5578DCEAFC84576649B0058 /* Pods */ = {
+		DD35B47A3690556024FE7E0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F0BCF37713A9A99DB66D91FE /* Pods-Kadr-Blue.debug.xcconfig */,
-				EB78F3495D1D91CBC233D498 /* Pods-Kadr-Blue.release.xcconfig */,
-				6630503E5C651EC84B0A01AC /* Pods-Kadr-BlueTests.debug.xcconfig */,
-				A811B202D918FF9E52A1543D /* Pods-Kadr-BlueTests.release.xcconfig */,
-				A099FF1B88293C2E4E964736 /* Pods-Kadr-BlueUITests.debug.xcconfig */,
-				65E519DE892D6E9EECA1419F /* Pods-Kadr-BlueUITests.release.xcconfig */,
+				19BE8E86EBF71F39C066C5F9 /* Pods-Kadr-Blue.debug.xcconfig */,
+				B4750C2B8D87F4257A0EDCE8 /* Pods-Kadr-Blue.release.xcconfig */,
+				1BB9D091EC5D864978CEADE8 /* Pods-Kadr-BlueTests.debug.xcconfig */,
+				742478BF2B11C7725FB51C76 /* Pods-Kadr-BlueTests.release.xcconfig */,
+				9B98BE20D6629C2E0E1F64C1 /* Pods-Kadr-BlueUITests.debug.xcconfig */,
+				AD0CB88F310CDD9017A724A4 /* Pods-Kadr-BlueUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -148,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				FA30E6E21DAF45460020B29F /* UIHelper.swift */,
+				3F4ABB701DB819B70077216B /* UserInputHelper.swift */,
+				3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -159,8 +165,8 @@
 				FACB6C1B1DAE9D8D0048727B /* Kadr-BlueTests */,
 				FACB6C261DAE9D8D0048727B /* Kadr-BlueUITests */,
 				FACB6C051DAE9D8C0048727B /* Products */,
-				F5578DCEAFC84576649B0058 /* Pods */,
-				59C262624EDDAB0FB11A8035 /* Frameworks */,
+				DD35B47A3690556024FE7E0E /* Pods */,
+				8EE3B0CA394CB61D2404480F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,12 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACB6C2C1DAE9D8D0048727B /* Build configuration list for PBXNativeTarget "Kadr-Blue" */;
 			buildPhases = (
-				84A3B38A43510CCE3782DA8A /* Check Pods Manifest.lock */,
+				D908E5F8A5C40B3D1E55F431 /* [CP] Check Pods Manifest.lock */,
 				FACB6C001DAE9D8C0048727B /* Sources */,
 				FACB6C011DAE9D8C0048727B /* Frameworks */,
 				FACB6C021DAE9D8C0048727B /* Resources */,
-				9494FB9270D0C5DE9BAFA6CC /* Embed Pods Frameworks */,
-				7B63EFE2D79197B3E40B6E79 /* Copy Pods Resources */,
+				8479E25A3ECB9B98D4CF0FCF /* [CP] Embed Pods Frameworks */,
+				857C7E5D4C9BAD042929FD69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,12 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACB6C2F1DAE9D8D0048727B /* Build configuration list for PBXNativeTarget "Kadr-BlueTests" */;
 			buildPhases = (
-				EDFE807EB675912E4AA7B86D /* Check Pods Manifest.lock */,
+				4D295601128A457643ED349F /* [CP] Check Pods Manifest.lock */,
 				FACB6C141DAE9D8C0048727B /* Sources */,
 				FACB6C151DAE9D8C0048727B /* Frameworks */,
 				FACB6C161DAE9D8C0048727B /* Resources */,
-				D17293D1D79B2E9244DAE75D /* Embed Pods Frameworks */,
-				6E92304366D311DC4658EDE2 /* Copy Pods Resources */,
+				25341CC7A429EECBED73349D /* [CP] Embed Pods Frameworks */,
+				12F0244D0B6ACE92E72491B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,11 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACB6C321DAE9D8D0048727B /* Build configuration list for PBXNativeTarget "Kadr-BlueUITests" */;
 			buildPhases = (
-				FF64080FCBEF4D9BF379E955 /* Check Pods Manifest.lock */,
+				B12ACE52931ABD6B6D1AD3FF /* [CP] Check Pods Manifest.lock */,
 				FACB6C1F1DAE9D8D0048727B /* Sources */,
 				FACB6C201DAE9D8D0048727B /* Frameworks */,
 				FACB6C211DAE9D8D0048727B /* Resources */,
-				BD8B9D3C36CC9E66702ACD6A /* Copy Pods Resources */,
+				DA95465750B533F8D46FC6A0 /* [CP] Embed Pods Frameworks */,
+				580837BEA551B497A20DB520 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -298,7 +305,7 @@
 				TargetAttributes = {
 					FACB6C031DAE9D8C0048727B = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = E2G7ZKJKQ5;
+						DevelopmentTeam = DJE44ZPPJW;
 						ProvisioningStyle = Automatic;
 					};
 					FACB6C171DAE9D8C0048727B = {
@@ -364,14 +371,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6E92304366D311DC4658EDE2 /* Copy Pods Resources */ = {
+		12F0244D0B6ACE92E72491B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,74 +386,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B63EFE2D79197B3E40B6E79 /* Copy Pods Resources */ = {
+		25341CC7A429EECBED73349D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		84A3B38A43510CCE3782DA8A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9494FB9270D0C5DE9BAFA6CC /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD8B9D3C36CC9E66702ACD6A /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D17293D1D79B2E9244DAE75D /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,34 +401,109 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EDFE807EB675912E4AA7B86D /* Check Pods Manifest.lock */ = {
+		4D295601128A457643ED349F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FF64080FCBEF4D9BF379E955 /* Check Pods Manifest.lock */ = {
+		580837BEA551B497A20DB520 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8479E25A3ECB9B98D4CF0FCF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		857C7E5D4C9BAD042929FD69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B12ACE52931ABD6B6D1AD3FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D908E5F8A5C40B3D1E55F431 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA95465750B533F8D46FC6A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kadr-BlueUITests/Pods-Kadr-BlueUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -491,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4ABB731DB81B1D0077216B /* FirebaseHelper.swift in Sources */,
 				FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */,
 				FACB39D91DAFED1D0012F320 /* starRatingView.swift in Sources */,
 				FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */,
@@ -501,6 +524,7 @@
 				FA30E6E31DAF45460020B29F /* UIHelper.swift in Sources */,
 				FA30E6E71DAF4A330020B29F /* PortfolioCell.swift in Sources */,
 				FACB6C371DAE9F710048727B /* HomeController.swift in Sources */,
+				3F4ABB711DB819B70077216B /* UserInputHelper.swift in Sources */,
 				FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */,
 				FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */,
 			);
@@ -650,10 +674,10 @@
 		};
 		FACB6C2D1DAE9D8D0048727B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0BCF37713A9A99DB66D91FE /* Pods-Kadr-Blue.debug.xcconfig */;
+			baseConfigurationReference = 19BE8E86EBF71F39C066C5F9 /* Pods-Kadr-Blue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E2G7ZKJKQ5;
+				DEVELOPMENT_TEAM = DJE44ZPPJW;
 				INFOPLIST_FILE = "Kadr-Blue/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kadr.Kadr-Blue";
@@ -664,10 +688,10 @@
 		};
 		FACB6C2E1DAE9D8D0048727B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB78F3495D1D91CBC233D498 /* Pods-Kadr-Blue.release.xcconfig */;
+			baseConfigurationReference = B4750C2B8D87F4257A0EDCE8 /* Pods-Kadr-Blue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E2G7ZKJKQ5;
+				DEVELOPMENT_TEAM = DJE44ZPPJW;
 				INFOPLIST_FILE = "Kadr-Blue/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kadr.Kadr-Blue";
@@ -678,7 +702,7 @@
 		};
 		FACB6C301DAE9D8D0048727B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6630503E5C651EC84B0A01AC /* Pods-Kadr-BlueTests.debug.xcconfig */;
+			baseConfigurationReference = 1BB9D091EC5D864978CEADE8 /* Pods-Kadr-BlueTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -694,7 +718,7 @@
 		};
 		FACB6C311DAE9D8D0048727B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A811B202D918FF9E52A1543D /* Pods-Kadr-BlueTests.release.xcconfig */;
+			baseConfigurationReference = 742478BF2B11C7725FB51C76 /* Pods-Kadr-BlueTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -710,7 +734,7 @@
 		};
 		FACB6C331DAE9D8D0048727B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A099FF1B88293C2E4E964736 /* Pods-Kadr-BlueUITests.debug.xcconfig */;
+			baseConfigurationReference = 9B98BE20D6629C2E0E1F64C1 /* Pods-Kadr-BlueUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = E2G7ZKJKQ5;
@@ -725,7 +749,7 @@
 		};
 		FACB6C341DAE9D8D0048727B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65E519DE892D6E9EECA1419F /* Pods-Kadr-BlueUITests.release.xcconfig */;
+			baseConfigurationReference = AD0CB88F310CDD9017A724A4 /* Pods-Kadr-BlueUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = E2G7ZKJKQ5;

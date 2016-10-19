@@ -7,17 +7,19 @@ target 'Kadr-Blue' do
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Database’
+pod 'Firebase/Auth'
 end
 
 target 'Kadr-BlueTests' do
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Database’
+pod 'Firebase/Auth'
 end
 
 target 'Kadr-BlueUITests' do
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Database’
+pod 'Firebase/Auth'
 end
-

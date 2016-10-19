@@ -53,6 +53,18 @@ class BookTimeAndPlaceController: UIViewController {
     */
     
     @IBAction func nextButtonTapped(_ sender: AnyObject) {
+        
+        let date = bookingTimePicker.date
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        
+        let dateStr = formatter.string(from: date)
+        
+        UserInputHelper.sharedInstance.dateAndTime = String(dateStr)
+        UserInputHelper.sharedInstance.place = locationTextfield.text
+
+        
         self.performSegue(withIdentifier: "segueFromTimeToUserInformation", sender: nil)
     }
 
