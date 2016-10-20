@@ -22,7 +22,7 @@ class BookTimeAndPlaceController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Date and Time"
+        self.title = "Date and Place".localized
         bookingTimePicker.minimumDate =  Date()
         
         NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
@@ -100,5 +100,11 @@ extension BookTimeAndPlaceController {
         self.view.endEditing(true)
     }
     
+}
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
 }
 

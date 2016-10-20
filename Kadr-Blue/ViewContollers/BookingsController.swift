@@ -20,7 +20,7 @@ class BookingsController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Your photographer"
+        self.title = "Your photographer".localized
         
         switch stars {
             case "one": ranking = 1
@@ -70,3 +70,4 @@ class BookingsController: UIViewController, UITableViewDelegate, UITableViewData
     */
 
 }
+

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28D3A9A60D1AA5CBABF84730 /* libPods-Kadr-BlueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B333101F9F930CD214BF5 /* libPods-Kadr-BlueTests.a */; };
+		3F30122F1DB976D9002C37D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F3012311DB976D9002C37D6 /* Localizable.strings */; };
 		3F4ABB711DB819B70077216B /* UserInputHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB701DB819B70077216B /* UserInputHelper.swift */; };
 		3F4ABB731DB81B1D0077216B /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */; };
 		3F4ABB761DB85D800077216B /* EmptyBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB751DB85D800077216B /* EmptyBookingViewController.swift */; };
@@ -52,6 +53,9 @@
 /* Begin PBXFileReference section */
 		19BE8E86EBF71F39C066C5F9 /* Pods-Kadr-Blue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-Blue.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-Blue/Pods-Kadr-Blue.debug.xcconfig"; sourceTree = "<group>"; };
 		1BB9D091EC5D864978CEADE8 /* Pods-Kadr-BlueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F30122B1DB970CE002C37D6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		3F30122C1DB970CF002C37D6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3F3012301DB976D9002C37D6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3F4ABB701DB819B70077216B /* UserInputHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputHelper.swift; sourceTree = "<group>"; };
 		3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		3F4ABB741DB81DF60077216B /* Kadr-Blue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kadr-Blue-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				3F4ABB701DB819B70077216B /* UserInputHelper.swift */,
 				3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */,
 				3F4ABB741DB81DF60077216B /* Kadr-Blue-Bridging-Header.h */,
+				3F3012311DB976D9002C37D6 /* Localizable.strings */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F30122F1DB976D9002C37D6 /* Localizable.strings in Resources */,
 				FACB6C121DAE9D8C0048727B /* LaunchScreen.storyboard in Resources */,
 				FACB6C0F1DAE9D8C0048727B /* Assets.xcassets in Resources */,
 				FACB6C0D1DAE9D8C0048727B /* Main.storyboard in Resources */,
@@ -564,10 +570,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3F3012311DB976D9002C37D6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F3012301DB976D9002C37D6 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FACB6C0B1DAE9D8C0048727B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FACB6C0C1DAE9D8C0048727B /* Base */,
+				3F30122B1DB970CE002C37D6 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -576,6 +591,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FACB6C111DAE9D8C0048727B /* Base */,
+				3F30122C1DB970CF002C37D6 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -587,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -636,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

@@ -37,7 +37,7 @@ class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
         self.userPhotoCountTextfield.delegate = self
 
         
-        self.title = "Information"
+        self.title = "Information".localized
         // Do any additional setup after loading the view.
         UIHelper.addCornersTo(view: userNameView)
         UIHelper.addCornersTo(view: userPhoneNumberView)

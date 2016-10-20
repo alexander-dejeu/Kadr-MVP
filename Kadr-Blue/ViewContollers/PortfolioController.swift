@@ -23,7 +23,7 @@ class PortfolioController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     override func viewDidLoad() {
-        self.title = "Our works"
+        self.title = "Our works".localized
         super.viewDidLoad()
         
         let dbRef = database.reference().child("Portfolio").child("FileNames")

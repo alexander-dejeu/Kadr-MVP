@@ -1,0 +1,84 @@
+
+/* Class = "UILabel"; text = "Where"; ObjectID = "1ob-xX-GGD"; */
+"1ob-xX-GGD.text" = "Адрес";
+
+/* Class = "UITextField"; placeholder = "Enter the name"; ObjectID = "31G-Tu-41n"; */
+"31G-Tu-41n.placeholder" = "Ваше полное имя";
+
+/* Class = "UILabel"; text = "You don't have any bookings"; ObjectID = "3FW-ZQ-qtG"; */
+"3FW-ZQ-qtG.text" = "У вас нет активных бронирований";
+
+/* Class = "UILabel"; text = "Jan Vogel"; ObjectID = "49a-kV-wkF"; */
+"49a-kV-wkF.text" = "Jan Vogel";
+
+/* Class = "UILabel"; text = "Your booking request"; ObjectID = "4nX-5X-uo0"; */
+"4nX-5X-uo0.text" = "Ваше бронирование";
+
+/* Class = "UITextField"; placeholder = "Enter the number"; ObjectID = "7dm-lF-Ec9"; */
+"7dm-lF-Ec9.placeholder" = "Кол-во фотографий";
+
+/* Class = "UILabel"; text = "13:00"; ObjectID = "8Ie-K0-lQA"; */
+"8Ie-K0-lQA.text" = "13:00";
+
+/* Class = "UILabel"; text = "Date and Time"; ObjectID = "8cB-Zl-J8B"; */
+"8cB-Zl-J8B.text" = "Дата и время";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "8dP-3a-cxv"; */
+"8dP-3a-cxv.normalTitle" = "Далее";
+
+/* Class = "UILabel"; text = "Phone number"; ObjectID = "Bu0-jB-DTD"; */
+"Bu0-jB-DTD.text" = "Номер телефона";
+
+/* Class = "UILabel"; text = "Booked"; ObjectID = "Ca3-Ab-hfJ"; */
+"Ca3-Ab-hfJ.text" = "Заявка принята";
+
+/* Class = "UIButton"; normalTitle = "Customer Support"; ObjectID = "Eje-7R-AXG"; */
+"Eje-7R-AXG.normalTitle" = "Чат поддержки";
+
+/* Class = "UIButton"; normalTitle = "Cancel Order"; ObjectID = "F2d-an-1fB"; */
+"F2d-an-1fB.normalTitle" = "Отменить бронирование";
+
+/* Class = "UIButton"; normalTitle = "Call"; ObjectID = "Fqu-gp-BSI"; */
+"Fqu-gp-BSI.normalTitle" = "Позвонить";
+
+/* Class = "UILabel"; text = "Book a photographer"; ObjectID = "LaJ-Av-Sm9"; */
+"LaJ-Av-Sm9.text" = "Забронировать фотографа";
+
+/* Class = "UILabel"; text = "Your name"; ObjectID = "Suq-Ch-ZKE"; */
+"Suq-Ch-ZKE.text" = "Ваше имя";
+
+/* Class = "UILabel"; text = "manage your booking"; ObjectID = "Yaf-P6-15u"; */
+"Yaf-P6-15u.text" = "контакты фотографа и управление";
+
+/* Class = "UITextField"; placeholder = "Enter the phone number"; ObjectID = "Zrg-p2-wWw"; */
+"Zrg-p2-wWw.placeholder" = "Ваш номер телефона";
+
+/* Class = "UILabel"; text = "Portfolio"; ObjectID = "aWD-4d-7VR"; */
+"aWD-4d-7VR.text" = "Портфолио";
+
+/* Class = "UILabel"; text = "Waiting for photographer to be assigned"; ObjectID = "asL-gZ-cbV"; */
+"asL-gZ-cbV.text" = "Мы подбираем фотографа для вас";
+
+/* Class = "UIButton"; normalTitle = "Book"; ObjectID = "bg7-UZ-aVz"; */
+"bg7-UZ-aVz.normalTitle" = "Забронировать";
+
+/* Class = "UILabel"; text = "our works"; ObjectID = "cMO-xI-o3G"; */
+"cMO-xI-o3G.text" = "наши работы";
+
+/* Class = "UILabel"; text = "November 30"; ObjectID = "cnL-hQ-VVW"; */
+"cnL-hQ-VVW.text" = "November 30";
+
+/* Class = "UIButton"; normalTitle = "Book Now"; ObjectID = "qY5-cB-LVt"; */
+"qY5-cB-LVt.normalTitle" = "Забронировать";
+
+/* Class = "UILabel"; text = "chose a convenient time and place"; ObjectID = "qbo-2G-KIc"; */
+"qbo-2G-KIc.text" = "выберите удобное место и время";
+
+/* Class = "UITextField"; placeholder = "Enter Meeting Location"; ObjectID = "sZf-Hc-CL1"; */
+"sZf-Hc-CL1.placeholder" = "Станция Метро";
+
+/* Class = "UILabel"; text = "How many photos do you need?"; ObjectID = "vsp-cK-eP2"; */
+"vsp-cK-eP2.text" = "Сколько фотографий вам нужно?";
+
+/* Class = "UILabel"; text = "Red Square"; ObjectID = "yok-se-FL6"; */
+"yok-se-FL6.text" = "Red Square";
