@@ -39,19 +39,30 @@ class HomeController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
+        // Get the new view controller using 
+        if segue.identifier == "segueFromHomeToBookings" {
+         let nextScene = segue.destination as? BookingsController
+        nextScene?.name = infoDict["name"]
+        nextScene?.date = infoDict["date"]
+        nextScene?.time = infoDict["time"]
+        nextScene?.place = infoDict["place"]
+        nextScene?.phone = infoDict["phoneNumber"]
+        nextScene?.stars = infoDict["stars"]
+            
+        }
+        
         // Pass the selected object to the new view controller.
     }
-    */
+    
     
     @IBAction func bookPhotographerButtonTapped(_ sender: AnyObject) {
         self.performSegue(withIdentifier: "segueFromHomeToBookPhotographer", sender: nil)
     }
+    
+    var infoDict = [String : String]()
     
     @IBAction func yourBookingsButtonTapped(_ sender: AnyObject) {
         
@@ -62,6 +73,7 @@ class HomeController: UIViewController {
                     
                     if status {
                     print(infoDict)
+                    self.infoDict = infoDict
                     self.performSegue(withIdentifier: "segueFromHomeToBookings", sender: nil)
                     } else {
                     self.performSegue(withIdentifier: "waiting", sender: nil)
