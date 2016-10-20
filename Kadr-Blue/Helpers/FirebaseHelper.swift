@@ -39,6 +39,32 @@ class FirebaseHelper {
         }
     }
     
+    func checkAssignPhoto(completion: @escaping (Bool, [String: String]) -> Void)  {
+        
+        bookingsRef = FIRDatabase.database().reference().child("AssignedBookings")
+        
+        bookingsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            var assignedPhotoData = [String: String]()
+            print(snapshot.value)
+            print(snapshot.childSnapshot(forPath: self.userID!).exists())
+            if snapshot.childSnapshot(forPath: self.userID!).exists() {
+                
+                for child in snapshot.childSnapshot(forPath: self.userID!).children.allObjects as!  [FIRDataSnapshot] {
+                    let key = child.key as String
+                    let value = child.value as! String
+                    assignedPhotoData[key] = value
+                }
+                completion(true, assignedPhotoData)
+            } else {
+            completion(false, assignedPhotoData)
+            }
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
     func checkExistingBooking(completion: @escaping (Bool) -> Void)  {
         
         bookingsRef = FIRDatabase.database().reference().child("bookings")
@@ -52,6 +78,7 @@ class FirebaseHelper {
             print(error.localizedDescription)
         }
     }
+
     
 }
 

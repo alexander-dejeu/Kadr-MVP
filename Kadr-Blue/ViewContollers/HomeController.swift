@@ -57,7 +57,18 @@ class HomeController: UIViewController {
         
         FirebaseHelper.sharedInstance.checkExistingBooking(completion: { status in
             if status {
-            self.performSegue(withIdentifier: "segueFromHomeToBookings", sender: nil)
+                FirebaseHelper.sharedInstance.checkAssignPhoto(completion: {
+                status, infoDict in
+                    
+                    if status {
+                    print(infoDict)
+                    self.performSegue(withIdentifier: "segueFromHomeToBookings", sender: nil)
+                    } else {
+                    self.performSegue(withIdentifier: "waiting", sender: nil)
+                    }
+                    
+                })
+           
             } else {
             self.performSegue(withIdentifier: "emptyBooking", sender: nil)
             }
