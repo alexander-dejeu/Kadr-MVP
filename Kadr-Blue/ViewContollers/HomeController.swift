@@ -54,8 +54,16 @@ class HomeController: UIViewController {
     }
     
     @IBAction func yourBookingsButtonTapped(_ sender: AnyObject) {
-        self.performSegue(withIdentifier: "segueFromHomeToBookings", sender: nil)
-    }
+        
+        FirebaseHelper.sharedInstance.checkExistingBooking(completion: { status in
+            if status {
+            self.performSegue(withIdentifier: "segueFromHomeToBookings", sender: nil)
+            } else {
+            self.performSegue(withIdentifier: "emptyBooking", sender: nil)
+            }
+            })
+        
+          }
     
     @IBAction func portfolioButtonTapped(_ sender: AnyObject) {
         self.performSegue(withIdentifier: "segueFromHomeToProfile", sender: nil)

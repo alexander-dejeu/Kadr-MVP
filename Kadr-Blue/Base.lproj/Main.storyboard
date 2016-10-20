@@ -85,12 +85,12 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRb-GO-KQb" userLabel="Bookings View">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nX-5X-uo0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your booking request" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nX-5X-uo0">
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.27450980390000002" green="0.6705882353" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="manage your bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-P6-15u">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="manage your booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-P6-15u">
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -150,7 +150,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96071070432662964" green="0.96082574129104614" blue="0.96067160367965698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5nR-Z0-ltY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="0eq-uT-AM2"/>
                             <constraint firstAttribute="trailing" secondItem="5nR-Z0-ltY" secondAttribute="trailing" constant="20" id="349-Pk-ByZ"/>
@@ -175,6 +175,7 @@
                         <segue destination="xH8-QQ-UbW" kind="show" identifier="segueFromHomeToBookings" id="qYw-GT-i9G"/>
                         <segue destination="H1x-X2-R1v" kind="show" identifier="segueFromHomeToProfile" id="tMP-nj-7IX"/>
                         <segue destination="47H-gk-Krc" kind="show" identifier="segueFromHomeToBookPhotographer" id="h33-rR-gXI"/>
+                        <segue destination="nJ4-8T-lcO" kind="show" identifier="emptyBooking" id="jOn-dQ-dBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -239,16 +240,20 @@
                                     <outlet property="delegate" destination="H1x-X2-R1v" id="dhz-sC-mEd"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="msr-hK-hHJ"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="msr-hK-hHJ" firstAttribute="centerY" secondItem="Pjg-Xq-tbj" secondAttribute="centerY" id="4LA-n4-hAN"/>
                             <constraint firstItem="p22-8o-1xY" firstAttribute="top" secondItem="dD5-o4-eEz" secondAttribute="bottom" id="6Se-MJ-Jzp"/>
                             <constraint firstItem="dD5-o4-eEz" firstAttribute="top" secondItem="Pjg-Xq-tbj" secondAttribute="top" id="73e-LR-PhO"/>
                             <constraint firstAttribute="trailing" secondItem="dD5-o4-eEz" secondAttribute="trailing" id="Np2-qD-yZV"/>
                             <constraint firstItem="dD5-o4-eEz" firstAttribute="leading" secondItem="Pjg-Xq-tbj" secondAttribute="leading" id="TLb-BF-d7f"/>
+                            <constraint firstItem="msr-hK-hHJ" firstAttribute="centerX" secondItem="Pjg-Xq-tbj" secondAttribute="centerX" id="hMm-nK-6k4"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicator" destination="msr-hK-hHJ" id="eg9-vk-BZ2"/>
                         <outlet property="portfolioTableView" destination="dD5-o4-eEz" id="xbw-5d-8kc"/>
                     </connections>
                 </viewController>
@@ -682,10 +687,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQR-yr-5Ab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="37"/>
+            <point key="canvasLocation" x="1247" y="107"/>
+        </scene>
+        <!--Empty Booking View Controller-->
+        <scene sceneID="DKw-nM-ieq">
+            <objects>
+                <viewController id="nJ4-8T-lcO" customClass="EmptyBookingViewController" customModule="Kadr_Blue" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vlF-BS-BuS"/>
+                        <viewControllerLayoutGuide type="bottom" id="A8H-Xp-fqG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PYu-JT-mu4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any bookings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FW-ZQ-qtG">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.52549019610000003" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY5-cB-LVt">
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.6705882353" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="uOM-qb-aCl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Book Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="customerSupportButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YD5-5x-PYw"/>
+                                    <segue destination="47H-gk-Krc" kind="show" id="Vui-Rr-sKW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qY5-cB-LVt" secondAttribute="trailing" constant="20" id="4yV-Ox-hw9"/>
+                            <constraint firstItem="qY5-cB-LVt" firstAttribute="leading" secondItem="PYu-JT-mu4" secondAttribute="leading" constant="20" id="Ev9-ZG-XV5"/>
+                            <constraint firstItem="3FW-ZQ-qtG" firstAttribute="centerX" secondItem="PYu-JT-mu4" secondAttribute="centerX" id="Rds-lJ-of5"/>
+                            <constraint firstItem="3FW-ZQ-qtG" firstAttribute="centerY" secondItem="PYu-JT-mu4" secondAttribute="centerY" id="nW7-fc-2dK"/>
+                            <constraint firstItem="A8H-Xp-fqG" firstAttribute="top" secondItem="qY5-cB-LVt" secondAttribute="bottom" constant="20" id="pGU-2J-hZo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Tt-2G-VGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="803"/>
         </scene>
     </scenes>
     <resources>
         <image name="Close" width="39" height="39"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Vui-Rr-sKW"/>
+    </inferredMetricsTieBreakers>
 </document>

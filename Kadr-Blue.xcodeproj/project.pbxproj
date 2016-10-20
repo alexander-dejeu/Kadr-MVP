@@ -10,6 +10,7 @@
 		28D3A9A60D1AA5CBABF84730 /* libPods-Kadr-BlueTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A34B333101F9F930CD214BF5 /* libPods-Kadr-BlueTests.a */; };
 		3F4ABB711DB819B70077216B /* UserInputHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB701DB819B70077216B /* UserInputHelper.swift */; };
 		3F4ABB731DB81B1D0077216B /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */; };
+		3F4ABB761DB85D800077216B /* EmptyBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4ABB751DB85D800077216B /* EmptyBookingViewController.swift */; };
 		F43FB27F9F08346C9DEC243F /* libPods-Kadr-BlueUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E99190FD6AF281AE285C726 /* libPods-Kadr-BlueUITests.a */; };
 		FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6D61DAF30AA0020B29F /* BookingsController.swift */; };
 		FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA30E6D81DAF30F00020B29F /* PortfolioController.swift */; };
@@ -22,7 +23,6 @@
 		FAC8BF171DB32B68003EACFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC8BF161DB32B68003EACFF /* GoogleService-Info.plist */; };
 		FACB39D91DAFED1D0012F320 /* starRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB39D81DAFED1D0012F320 /* starRatingView.swift */; };
 		FACB6C081DAE9D8C0048727B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C071DAE9D8C0048727B /* AppDelegate.swift */; };
-		FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB6C091DAE9D8C0048727B /* ViewController.swift */; };
 		FACB6C0D1DAE9D8C0048727B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB6C0B1DAE9D8C0048727B /* Main.storyboard */; };
 		FACB6C0F1DAE9D8C0048727B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACB6C0E1DAE9D8C0048727B /* Assets.xcassets */; };
 		FACB6C121DAE9D8C0048727B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB6C101DAE9D8C0048727B /* LaunchScreen.storyboard */; };
@@ -55,6 +55,7 @@
 		3F4ABB701DB819B70077216B /* UserInputHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInputHelper.swift; sourceTree = "<group>"; };
 		3F4ABB721DB81B1D0077216B /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		3F4ABB741DB81DF60077216B /* Kadr-Blue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kadr-Blue-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F4ABB751DB85D800077216B /* EmptyBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyBookingViewController.swift; sourceTree = "<group>"; };
 		6348B9E6A5E07EB4D769C5B6 /* libPods-Kadr-Blue.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-Blue.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		742478BF2B11C7725FB51C76 /* Pods-Kadr-BlueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kadr-BlueTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kadr-BlueTests/Pods-Kadr-BlueTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E99190FD6AF281AE285C726 /* libPods-Kadr-BlueUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Kadr-BlueUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +75,6 @@
 		FACB39D81DAFED1D0012F320 /* starRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = starRatingView.swift; sourceTree = "<group>"; };
 		FACB6C041DAE9D8C0048727B /* Kadr-Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadr-Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB6C071DAE9D8C0048727B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FACB6C091DAE9D8C0048727B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FACB6C0C1DAE9D8C0048727B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACB6C0E1DAE9D8C0048727B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACB6C111DAE9D8C0048727B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -189,7 +189,6 @@
 				FA30E6E11DAF45390020B29F /* Helpers */,
 				FACB6C351DAE9F620048727B /* ViewContollers */,
 				FACB6C071DAE9D8C0048727B /* AppDelegate.swift */,
-				FACB6C091DAE9D8C0048727B /* ViewController.swift */,
 				FACB6C0B1DAE9D8C0048727B /* Main.storyboard */,
 				FACB6C0E1DAE9D8C0048727B /* Assets.xcassets */,
 				FACB6C101DAE9D8C0048727B /* LaunchScreen.storyboard */,
@@ -226,6 +225,7 @@
 				FA30E6DA1DAF314D0020B29F /* BookTimeAndPlaceController.swift */,
 				FA30E6DC1DAF315F0020B29F /* BookingUserDetailsController.swift */,
 				FA30E6DE1DAF31710020B29F /* ConfirmBookingController.swift */,
+				3F4ABB751DB85D800077216B /* EmptyBookingViewController.swift */,
 			);
 			path = ViewContollers;
 			sourceTree = "<group>";
@@ -516,7 +516,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4ABB731DB81B1D0077216B /* FirebaseHelper.swift in Sources */,
-				FACB6C0A1DAE9D8C0048727B /* ViewController.swift in Sources */,
 				FACB39D91DAFED1D0012F320 /* starRatingView.swift in Sources */,
 				FA30E6DD1DAF315F0020B29F /* BookingUserDetailsController.swift in Sources */,
 				FA30E6D91DAF30F00020B29F /* PortfolioController.swift in Sources */,
@@ -527,6 +526,7 @@
 				FA30E6E71DAF4A330020B29F /* PortfolioCell.swift in Sources */,
 				FACB6C371DAE9F710048727B /* HomeController.swift in Sources */,
 				3F4ABB711DB819B70077216B /* UserInputHelper.swift in Sources */,
+				3F4ABB761DB85D800077216B /* EmptyBookingViewController.swift in Sources */,
 				FA30E6DB1DAF314D0020B29F /* BookTimeAndPlaceController.swift in Sources */,
 				FA30E6D71DAF30AA0020B29F /* BookingsController.swift in Sources */,
 			);

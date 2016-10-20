@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class PortfolioController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     var database: FIRDatabase! = FIRDatabase.database()
     var storage: FIRStorage! = FIRStorage.storage()
     
@@ -43,6 +44,7 @@ class PortfolioController: UIViewController, UITableViewDataSource, UITableViewD
                 self.picArray.append(pic!)
                 print(self.picArray.count)
                 self.portfolioTableView.reloadData()
+                self.indicator.isHidden = true
             }
         })
         

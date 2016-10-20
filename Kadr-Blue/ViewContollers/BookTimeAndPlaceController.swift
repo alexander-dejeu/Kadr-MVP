@@ -23,6 +23,7 @@ class BookTimeAndPlaceController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Date and Time"
+        bookingTimePicker.minimumDate =  Date()
         
         NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(BookTimeAndPlaceController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -62,10 +63,14 @@ class BookTimeAndPlaceController: UIViewController {
         let dateStr = formatter.string(from: date)
         
         UserInputHelper.sharedInstance.dateAndTime = String(dateStr)
-        UserInputHelper.sharedInstance.place = locationTextfield.text
-
         
+
+        if locationTextfield.text != "" {
+            
+        UserInputHelper.sharedInstance.place = locationTextfield.text
         self.performSegue(withIdentifier: "segueFromTimeToUserInformation", sender: nil)
+            
+        }
     }
 
 }

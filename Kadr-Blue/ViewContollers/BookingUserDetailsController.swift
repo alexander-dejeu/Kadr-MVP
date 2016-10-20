@@ -71,9 +71,15 @@ class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
             UserInputHelper.sharedInstance.number = Int(number)
         }
         
+        
+        
+        if userNameTextfield.text != "" && userPhoneNumberTextfield.text != nil && userPhotoCountTextfield.text != nil {
+        
         UserInputHelper.sharedInstance.saveBookingRequest()
         
         self.performSegue(withIdentifier: "segueFromUserInformationToBookingConfirmation", sender: nil)
+        
+        }
     }
 
 }
