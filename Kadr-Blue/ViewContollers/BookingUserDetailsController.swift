@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
+class BookingUserDetailsController: UIViewController, UITextFieldDelegate, STPPaymentContextDelegate {
     @IBOutlet weak var userNameView: UIView!
     @IBOutlet weak var userPhoneNumberView: UIView!
     @IBOutlet weak var userPhototCountView: UIView!
@@ -43,6 +43,13 @@ class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
         UIHelper.addCornersTo(view: userPhoneNumberView)
         UIHelper.addCornersTo(view: userPhototCountView)
             UIHelper.addCornersTo(view: bookButton)
+        
+        // Here, MyAPIAdapter is your class that implements STPBackendAPIAdapter (see above)
+        self.paymentContext = STPPaymentContext(apiAdapter: MyAPIAdapter())
+        super.init(nibName: nil, bundle: nil)
+        self.paymentContext.delegate = self
+        self.paymentContext.hostViewController = self
+        self.paymentContext.paymentAmount = 5000 // Measured in cents, i.e. $50 USD
 
     }
 
@@ -51,7 +58,50 @@ class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    /* MARK: - STRIPE  */
+    func paymentContextDidChange(paymentContext: STPPaymentContext) {
+        self.activityIndicator.animating = paymentContext.loading
+        self.paymentButton.enabled = paymentContext.selectedPaymentMethod != nil
+        self.paymentLabel.text = paymentContext.selectedPaymentMethod?.label
+        self.paymentIcon.image = paymentContext.selectedPaymentMethod?.image
+    }
+    
+    
+    func paymentContext(paymentContext: STPPaymentContext,
+                        didCreatePaymentResult paymentResult: STPPaymentResult,
+                        completion: STPErrorBlock) {
+        
+        myAPIClient.createCharge(paymentResult.source.stripeID, completion: { (error: NSError?) in
+            if let error = error {
+                completion(error)
+            } else {
+                completion(nil)
+            }
+        })
+    }
+    
+    func paymentContext(paymentContext: STPPaymentContext,
+                        didFinishWithStatus status: STPPaymentStatus,
+                        error: NSError?) {
+        
+        switch status {
+        case .Error:
+            self.showError(error)
+        case .Success:
+            self.showReceipt()
+        case .UserCancellation:
+            return // Do nothing
+        }
+    }
+    
+    func paymentContext(paymentContext: STPPaymentContext,
+                        didFailToLoadWithError error: NSError) {
+        self.navigationController?.popViewControllerAnimated(true)
+        // Show the error to your user, etc.
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -63,6 +113,7 @@ class BookingUserDetailsController: UIViewController, UITextFieldDelegate {
     */
     
     @IBAction func bookButtonPressed(_ sender: AnyObject) {
+        self.paymentContext.requestPayment()
         self.performSegue(withIdentifier: "segueFromUserInformationToBookingConfirmation", sender: nil)
     }
 
