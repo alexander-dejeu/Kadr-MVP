@@ -65,6 +65,7 @@
 		FA30E6E21DAF45460020B29F /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		FA30E6E41DAF4A230020B29F /* BookingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingsCell.swift; sourceTree = "<group>"; };
 		FA30E6E61DAF4A330020B29F /* PortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
+		FA69A63D1DC5200B00EA47E1 /* Kadr-Blue-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Kadr-Blue-Bridging-Header.h"; path = "Kadr-Blue/Kadr-Blue-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAC8BF161DB32B68003EACFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FACB39D81DAFED1D0012F320 /* starRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = starRatingView.swift; sourceTree = "<group>"; };
 		FACB6C041DAE9D8C0048727B /* Kadr-Blue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kadr-Blue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +156,7 @@
 		FACB6BFB1DAE9D8C0048727B = {
 			isa = PBXGroup;
 			children = (
+				FA69A63D1DC5200B00EA47E1 /* Kadr-Blue-Bridging-Header.h */,
 				FACB6C061DAE9D8C0048727B /* Kadr-Blue */,
 				FACB6C1B1DAE9D8D0048727B /* Kadr-BlueTests */,
 				FACB6C261DAE9D8D0048727B /* Kadr-BlueUITests */,
@@ -658,6 +660,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kadr.Kadr-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Kadr-Blue-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -672,6 +676,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Kadr.Kadr-Blue";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "Kadr-Blue-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

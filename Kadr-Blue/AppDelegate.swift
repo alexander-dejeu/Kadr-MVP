@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import Stripe
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
